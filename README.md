@@ -7,14 +7,14 @@ MIST 4610 - SQL Project 1
 5. Chris Vitucci 
 
 
-Problem Description:
+<u>Problem Description:</u>
 Pretend you are the owner/operator of a RUNNING association (club)
 needing to build a relational database. You hired some students from the MIST 4610 class at
 the University of Georgia to create the database for you. They need to know more about your
 organization to identify which entities, attributes, and relationships are important for you.
 Start by describing your business as a real client.
 
-CHATGPT Response:
+<u>CHATGPT Response:</u>
 As the owner/operator of a running club, our organization is dedicated to promoting health, fitness, and community through the sport of running. We provide a variety of services and activities tailored to runners of all ages and abilities, fostering a supportive environment where individuals can pursue their running goals and connect with like-minded enthusiasts.
 
 Here's a snapshot of our running club:
