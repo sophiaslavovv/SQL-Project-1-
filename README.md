@@ -3,8 +3,8 @@ MIST 4610 - SQL Project 1
 1. Shana Sah (https://github.com/shana-sah/SQL-Project-1-) 
 2. Maya Patel (https://github.com/mayapatel47488/SQL-Project-1-)
 3. Sofia Slavov (https://github.com/sophiaslavovv/SQL-PROJ-1)
-4. Cade Mayfield
-5. Chris Vitucci 
+4. Cade Mayfield (https://github.com/CaMay999/sql-project-1-)
+5. Chris Vitucci (https://github.com/chrisvitucci/SQL-Project-1)
 
 
 <u>Problem Description:</u>
@@ -375,5 +375,5 @@ This query is useful because the best runners attract the most viewers. By track
 | ORDER BY      |   | x | x |   | x | x |   |  |  |    |
 | JOIN          |  | x | x | x | x | x | x |   | x  |   |
 | DOUBLE JOIN   | x  |   |   |   |   |   |   |   |   |   |
-| NOT EXISTS    |   |   |   |   |   |   |   |   |   |  x  |
-| SUBQUERY      |   |   |  |   |   |  |   | x |   | x   |
+| TRIPLE JOIN   |   |   |   |   |   |   |   |   |   |  X |
+| SUBQUERY      |   |   |  |   |   |  |   | x |   |   |
