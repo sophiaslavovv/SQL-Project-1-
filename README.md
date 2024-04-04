@@ -1,5 +1,11 @@
 # SQL-Project-1
 MIST 4610 - SQL Project 1
+1. Shana Sah (https://github.com/shana-sah/SQL-Project-1-) 
+2. Maya 
+3. Sofia
+4. Cade
+5. Chris 
+
 
 Problem Description:
 Pretend you are the owner/operator of a RUNNING association (club)
@@ -28,6 +34,16 @@ Membership: We offer membership options with various benefits, including access 
 Equipment and Gear: Our club may provide access to equipment and gear, such as running apparel, shoes, hydration packs, and safety accessories, either through partnerships with vendors or through a club-owned inventory.
 
 Given this overview, the database should encompass key entities such as Members, Coaches, Events, Races, Training Programs, Workshops, Community Partnerships, Equipment, and Transactions, along with their associated attributes and relationships to effectively manage club operations, member registrations, event planning, coaching services, and inventory tracking.
+
+Questions asked to CHATGPT: What are the relationships? 
+Members - Events: Many-to-Many - Recorded via a junction table (e.g., Attendance).
+Members - Races: Many-to-Many - Utilizing a junction table (e.g., RaceRegistration).
+Members - Training Programs: Many-to-Many - Managed through a junction table (e.g., ProgramEnrollment).
+Coaches - Training Programs: One-to-Many - Coach ID foreign key in the Training Programs table.
+Members - Feedback: One-to-Many - Feedback table contains Member ID foreign key.
+Members - Volunteers: One-to-Many - Volunteers table links to Member ID.
+Members - Medical Information: One-to-One - Medical info stored in Members table or separate with one-to-one relationship.
+Members - Transactions: One-to-Many - Transactions table includes Member ID foreign key.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
