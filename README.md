@@ -33,15 +33,18 @@ Data Model:
 ![Runner Data Model](DataM.png)
 
 Queries:
-#1 Show me runners participated in races between january and february
+#1 Show me runners participated in races between january and february:
+
 SELECT RunnerFirstName,RunnerLastName
 FROM Runners
 JOIN Race Registration ON Runners.idRunners = Race Registration.idRunners
 JOIN Race ON Race Registration.idRaces = Races.idRaces
 WHERE rDate BETWEEN ‘01-01-2023 AND 02-28-2023’
+
 -Tracking runners who participated in races during a specific time period can help in monitoring their performance over time. Coaches, athletes, and enthusiasts can gain insights into the progress of individual runners by analyzing their race times, improvements, and consistency. 
 
 #2 How many runners does each coach have
+
 Select CoachFN, CoachLN, COUNT(Runners.idRunners) AS NumberOfRunners
 FROM Coaches
 JOIN Runners ON Coaches.idCoaches=Runners.idCoaches
@@ -51,6 +54,7 @@ ORDER BY NumberOfRunners DESC;
 Shows which coaches have the most runners in descending order; used for determining popularity of coaches.The number of runners under each coach allows the company to monitor the performance of coaches in terms of their ability to attract and retain runners.
 
 #3 How many transactions were made at each individual store?
+
 Select sLocation, COUNT(Transactions.TransactionID) AS NumberOfTransactions
 FROM Transactions
 JOIN Stores on Stores.StoreID=Transactions.StoreID
@@ -69,6 +73,7 @@ WHERE rc.TrainingCompleted = 'Yes';
 By displaying the number of runners who complete training programs, the company can assess the effectiveness of the programs they offer. A high completion rate may indicate that the training programs are well-designed and meeting the needs of the runners.
 
 #5 find the name of the training program and the number of runners who have completed it, sort the number of completions in descending order
+
 SELECT programName
 COUNT Runner_idRunners AS NumberOfCompletions
 FROM Training Programs
@@ -79,6 +84,7 @@ ORDER BY NumberofCompletions DESC;
 This query keeps track of which people have completed which races. Analyzing completion rates can also provide insights into areas for improvement in training programs. Adjustments and enhancements can be displayed to meet the needs of runners/participants.
 
 #6 list and count the names and contact information of the runners who have a guest count greater than 4. Sort in alphabetical order of runner last name
+
 Select RunnerFirstName, RunnerLastName, email, phoneNumber,
 COUNT (*) AS guestCount
 FROM Runners
@@ -90,6 +96,7 @@ ORDER BY RunnerLastName ASC;
 Retrieving  the names of the guests can increase participation. Listing the total number of participants who brought lots of guests encourages them to return.Knowing names/contact information of runners who plan to bring more than four guests to an event can help the company or event organizer anticipate attendance numbers accurately. 
 
 #7 What is the total number of races each runner has participated in
+
 SELECT 
     RunnerFirstName,
     RunnerLastName,
@@ -101,6 +108,7 @@ GROUP BY RunnerFirstName, RunnerLastName;
 Understanding the race participation history of each runner helps in tailoring training plans and schedules. Runners with more race experience might require different training approaches compared to those who are relatively new to racing. 
 
 #8 List members who participated in both events and races
+
 SELECT RunnerFirstName, RunnerLastName
 FROM Runners
 WHERE idRunners IN (
@@ -122,6 +130,7 @@ AND
 Members who participate in both events and races may demonstrate higher levels of loyalty and commitment to the company.Using this information to understand what motivates these individuals to participate in multiple activities can help the company create programs/events to keep customer loyalty.
 
 #9 find the event type and event name off all events with the number of attendees listed
+
 SELECT EventName,EventType,guestCount
 FROM Events 
 JOIN Attendance ON Events.idEvents = attendance.idEvents
@@ -133,8 +142,8 @@ They can identify which types of events are most popular and successful in terms
 SELECT RunnerFirstName, RunnerLast Name, Runners.idRunners FROM Runners WHERE NOT EXISTS  (SELECT * FROM Attendance WHERE Attendance.idRunners = Runners.idRunners); 
 The company  can reach out to these runners to understand their reasons for not participating and address any concerns or obstacles they may have. The company can use this information to develop new race formats, training programs, or other offerings that better cater to the needs of their participants.
 
-#11 Report the names of a runner who have a distance higher than their own 
-average distance.
+#11 Report the names of a runner who have a distance higher than their own average distance.
+
 Select RunnerFirstName, RunnerLastName
 From Races r
 JOIN Race Registration rr ON r.idRaces=rr.idRaces
