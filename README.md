@@ -72,7 +72,7 @@ WHERE rc.TrainingCompleted = 'Yes';
 
 By displaying the number of runners who complete training programs, the company can assess the effectiveness of the programs they offer. A high completion rate may indicate that the training programs are well-designed and meeting the needs of the runners.
 
-#5 find the name of the training program and the number of runners who have completed it, sort the number of completions in descending order
+#5 Find the name of the training program and the number of runners who have completed it, sort the number of completions in descending order
 
 SELECT programName
 COUNT Runner_idRunners AS NumberOfCompletions
@@ -83,7 +83,7 @@ ORDER BY NumberofCompletions DESC;
 
 This query keeps track of which people have completed which races. Analyzing completion rates can also provide insights into areas for improvement in training programs. Adjustments and enhancements can be displayed to meet the needs of runners/participants.
 
-#6 list and count the names and contact information of the runners who have a guest count greater than 4. Sort in alphabetical order of runner last name
+#6 List and count the names and contact information of the runners who have a guest count greater than 4. Sort in alphabetical order of runner last name
 
 Select RunnerFirstName, RunnerLastName, email, phoneNumber,
 COUNT (*) AS guestCount
@@ -129,7 +129,7 @@ AND
  
 Members who participate in both events and races may demonstrate higher levels of loyalty and commitment to the company.Using this information to understand what motivates these individuals to participate in multiple activities can help the company create programs/events to keep customer loyalty.
 
-#9 find the event type and event name off all events with the number of attendees listed
+#9 Find the event type and event name off all events with the number of attendees listed
 
 SELECT EventName,EventType,guestCount
 FROM Events 
