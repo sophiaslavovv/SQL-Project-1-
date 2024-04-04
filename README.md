@@ -35,7 +35,7 @@ Equipment and Gear: Our club may provide access to equipment and gear, such as r
 
 Given this overview, the database should encompass key entities such as Members, Coaches, Events, Races, Training Programs, Workshops, Community Partnerships, Equipment, and Transactions, along with their associated attributes and relationships to effectively manage club operations, member registrations, event planning, coaching services, and inventory tracking.
 
-Questions asked to CHATGPT: 
+Question 1  asked to CHATGPT: 
 
 What are the relationships? 
 
@@ -54,6 +54,114 @@ Members - Volunteers: One-to-Many - Volunteers table links to Member ID.
 Members - Medical Information: One-to-One - Medical info stored in Members table or separate with one-to-one relationship.
 
 Members - Transactions: One-to-Many - Transactions table includes Member ID foreign key.
+
+Q2: What are the attributes within each entity? 
+
+CHATGPT RESPONSE: Sure! Let's outline the attributes for each of the entities mentioned earlier:
+
+1.Runners:
+
+Runner ID (Primary Key)
+First Name
+Last Name
+Email
+Phone Number
+Address
+Date of Birth
+Gender
+Emergency Contact Information
+
+2.Coaches:
+
+Coach ID (Primary Key)
+First Name
+Last Name
+Email
+Phone Number
+Coaching Certification(s)
+Specialties/Expertise
+Availability (Days/Time)
+Bio/Description
+
+3.Events:
+Event ID (Primary Key)
+Event Name
+Event Type (e.g., Group Run, Workshop, Race)
+Date
+Time
+Location
+Description
+Registration Deadline
+Maximum Capacity
+
+4.Races:
+Race ID (Primary Key)
+Race Name
+Date
+Location
+Distance
+Registration Fee
+Registration Deadline
+Course Map
+Sponsors
+
+5.Training Programs:
+Program ID (Primary Key)
+Program Name
+Duration
+Focus Areas
+Schedule (Days/Time)
+Coach ID (Foreign Key)
+Description
+Enrollment Capacity
+
+6.Community Partnerships:
+Partnership ID (Primary Key)
+Partner Name
+Contact Person
+Contact Email
+Contact Phone
+Partnership Type
+Description
+Start Date
+End Date
+
+7.Workshops/Seminars:
+Workshop ID (Primary Key)
+Workshop Name
+Date
+Time
+Location
+Presenter(s)
+Description
+Registration Deadline
+Maximum Capacity
+
+8.Equipment/Gear:
+Item ID (Primary Key)
+Item Name
+Description
+Size/Specification
+Quantity Available
+Rental Price
+Purchase Price
+Supplier
+Date Acquired
+
+9.Transactions:
+Transaction ID (Primary Key)
+Member ID (Foreign Key)
+Transaction Date
+Transaction Type (e.g., Membership Fee, Event Registration, Merchandise Purchase)
+Amount
+Payment Method
+
+
+10. Stores
+Associative entity
+11. Clubs
+12. Attendance
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
