@@ -35,7 +35,10 @@ Equipment and Gear: Our club may provide access to equipment and gear, such as r
 
 Given this overview, the database should encompass key entities such as Members, Coaches, Events, Races, Training Programs, Workshops, Community Partnerships, Equipment, and Transactions, along with their associated attributes and relationships to effectively manage club operations, member registrations, event planning, coaching services, and inventory tracking.
 
-Questions asked to CHATGPT: What are the relationships? 
+Questions asked to CHATGPT: 
+
+What are the relationships? 
+
 Members - Events: Many-to-Many - Recorded via a junction table (e.g., Attendance).
 Members - Races: Many-to-Many - Utilizing a junction table (e.g., RaceRegistration).
 Members - Training Programs: Many-to-Many - Managed through a junction table (e.g., ProgramEnrollment).
