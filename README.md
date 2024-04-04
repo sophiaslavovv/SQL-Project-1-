@@ -40,12 +40,19 @@ Questions asked to CHATGPT:
 What are the relationships? 
 
 Members - Events: Many-to-Many - Recorded via a junction table (e.g., Attendance).
+
 Members - Races: Many-to-Many - Utilizing a junction table (e.g., RaceRegistration).
+
 Members - Training Programs: Many-to-Many - Managed through a junction table (e.g., ProgramEnrollment).
+
 Coaches - Training Programs: One-to-Many - Coach ID foreign key in the Training Programs table.
+
 Members - Feedback: One-to-Many - Feedback table contains Member ID foreign key.
+
 Members - Volunteers: One-to-Many - Volunteers table links to Member ID.
+
 Members - Medical Information: One-to-One - Medical info stored in Members table or separate with one-to-one relationship.
+
 Members - Transactions: One-to-Many - Transactions table includes Member ID foreign key.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
