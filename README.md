@@ -28,3 +28,7 @@ Membership: We offer membership options with various benefits, including access 
 Equipment and Gear: Our club may provide access to equipment and gear, such as running apparel, shoes, hydration packs, and safety accessories, either through partnerships with vendors or through a club-owned inventory.
 
 Given this overview, the database should encompass key entities such as Members, Coaches, Events, Races, Training Programs, Workshops, Community Partnerships, Equipment, and Transactions, along with their associated attributes and relationships to effectively manage club operations, member registrations, event planning, coaching services, and inventory tracking.
+
+Data Model: 
+![Runner Data Model](/path/to/DM.png)
+
