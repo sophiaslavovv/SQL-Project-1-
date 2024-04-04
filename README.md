@@ -30,7 +30,7 @@ Equipment and Gear: Our club may provide access to equipment and gear, such as r
 Given this overview, the database should encompass key entities such as Members, Coaches, Events, Races, Training Programs, Workshops, Community Partnerships, Equipment, and Transactions, along with their associated attributes and relationships to effectively manage club operations, member registrations, event planning, coaching services, and inventory tracking.
 
 Data Model: 
-![Runner Data Model](/path/to/DM.png)
+![Runner Data Model](DataM.png)
 
 Queries:
 #1 Show me runners participated in races between january and february
@@ -269,8 +269,6 @@ Of course! Here are all the tables formatted for your README.md file:
 | Stores_StoreID | The identification number corresponding to a specific Store             | Text      | 20   |        | FK(reference_Stores) |
 | sLocation     | Location of a store                                                     | Text      | 45   |        |      |
 | StoreHours    | Hours of operation for a store                                          | Numeric   | 8    | 99:99-99:99 |   |
-
-Certainly! Here's the matrix table formatted for your README.md file:
 
 ### MATRIX TABLE:
 
