@@ -253,9 +253,9 @@ The company can maintain a record of each runner's personal information, enablin
 | Column Name        | Description                                                      | Data Type | Size | Format         | Key? |
 |--------------------|------------------------------------------------------------------|-----------|------|----------------|------|
 | idRunners          | Unique sequential number indicating the runner identification    | INT      | 20   |                | PK   |
-| RunnerFirst Name  | The first name of the runner corresponding to a specific ID       | VARCHAR      | 14   |      Text          |      |
-| RunnerLast Name   | The last name of the runner corresponding to a specific ID        | VARCHAR     | 12   |      Text          |      |
-| email              | The contact email corresponding to a specific ID                  | VARCHAR     | 20   |       Text         |      |
+| RunnerFirst Name  | The first name of the runner corresponding to a specific ID       | VARCHAR      | 45   |      Text          |      |
+| RunnerLast Name   | The last name of the runner corresponding to a specific ID        | VARCHAR     | 45   |      Text          |      |
+| email              | The contact email corresponding to a specific ID                  | VARCHAR     | 45   |       Text         |      |
 | phoneNumber        | Phone number of runner in question                               | INT     | 10   | (999)999-9999 |      |
 | Coaches_idCoaches | The ID of each runner's coach                                     |  INT         |      |                | FK(Reference_Coaches)  |
 
@@ -264,9 +264,9 @@ The company can maintain a record of each runner's personal information, enablin
 | Column Name         | Description                                                             | Data Type | Size | Format         | Key? |
 |---------------------|-------------------------------------------------------------------------|-----------|------|----------------|------|
 | idCoaches           | Unique sequential number indicating the identification number of a coach | INT      | 18   |                | PK   |
-| CoachFN             | The first name of the coach corresponding to a specific ID              | VARCHAR     | 14   |           Text     |      |
-| CoachLN             | The last name of the coach corresponding to a specific ID               | VARCHAR      | 12   |       Text         |      |
-| Coachemail          | The contact email corresponding to a specific Coaches ID                 | VARCHAR      | 20   |      Text          |      |
+| CoachFN             | The first name of the coach corresponding to a specific ID              | VARCHAR     | 45   |           Text     |      |
+| CoachLN             | The last name of the coach corresponding to a specific ID               | VARCHAR      | 45   |       Text         |      |
+| Coachemail          | The contact email corresponding to a specific Coaches ID                 | VARCHAR      | 45   |      Text          |      |
 | CoachingCertification | Document identifying the coach as a legally responsible instructor of athletics | VARCHAR | 45 |  |   |
 
 ### Table: Equipment
@@ -274,7 +274,7 @@ The company can maintain a record of each runner's personal information, enablin
 | Column Name   | Description                                                                   | Data Type | Size | Format | Key? |
 |---------------|-------------------------------------------------------------------------------|-----------|------|--------|------|
 | equipmentID   | Unique sequential number indicating the serial number of a piece of equipment | INT      | 20   |        | PK   |
-| equipmentType | Identifies what form of equipment the item is.                                | VARCHAR    | 15   |   Text     |      |
+| equipmentType | Identifies what form of equipment the item is.                                | VARCHAR    | 45   |   Text     |      |
 | EquipmentYear | The year a piece of equipment was produced                                    | DATE   | 4    | 9999   |      |
 | Runners_idRunners | Unique sequential number indicating the runner identification number of the athlete | INT | 20 | | FK (refrence_Runners) |
 
@@ -284,7 +284,7 @@ The company can maintain a record of each runner's personal information, enablin
 | Column Name   | Description                                                             | Data Type | Size | Format | Key? |
 |---------------|-------------------------------------------------------------------------|-----------|------|--------|------|
 | MedicalID     | Unique sequential number indicating the identification number of a medical professional | INT | 25 |        | PK   |
-| DoctorName    | Name corresponding to each doctor                                       | VARCHAR      | 30   |   Text     |      |
+| DoctorName    | Name corresponding to each doctor                                       | VARCHAR      | 45   |   Text     |      |
 | Doctorlocation| Where the medical practitioner is located                               | VARCHAR     | 45   |   Text     |      |
 | Runners_idRunners | Unique sequential number indicating the runner identification number of the athlete | INT | 20 | | FK (refrence_Runners) |
 
@@ -295,15 +295,15 @@ The company can maintain a record of each runner's personal information, enablin
 | Runners_idRunners | Unique sequential number indicating the runner identification number of the athlete | INT | 20 | | FK (refrence_Runners) |
 | Events_idEvents | Unique number corresponding to a specific event                         | INT      | 15   |        | FK (refrence_Events) |
 | guestCount    | Number of guests per event                                             | INT    | 3    |        |      |
-| Club Check-in | How many of each club attended                                         | VARCHAR     | 3    |    Text    |      |
+| Club Check-in | How many of each club attended                                         | VARCHAR     | 45    |    Text    |      |
 
 ### Table: Events
 
 | Column Name   | Description                                                             | Data Type | Size | Format | Key? |
 |---------------|-------------------------------------------------------------------------|-----------|------|--------|------|
 | Events_idEvents | Unique number corresponding to a specific event                         | INT      | 15   |        | PK   |
-| EventName     | Name of an event                                                        | VARCHAR      | 25   |  Text      |      |
-| EventType     | The purpose of the event                                                | VARCHAR      | 20   |  Text      |      |
+| EventName     | Name of an event                                                        | VARCHAR      | 45   |  Text      |      |
+| EventType     | The purpose of the event                                                | VARCHAR      | 45  |  Text      |      |
 | date          | When the event is going to occur                                        | DATE   | 8    | 99-99-9999 |    |
 | location      | Where the event is going to occur                                       | VARCHAR     | 45   |    Text    |      |
 
@@ -312,7 +312,7 @@ The company can maintain a record of each runner's personal information, enablin
 | Column Name   | Description                                                             | Data Type | Size | Format | Key? |
 |---------------|-------------------------------------------------------------------------|-----------|------|--------|------|
 | idRaces       | Identification number of a specific race                                | INT     | 20   |        | PK   |
-| RaceName      | Name of race                                                            | VARCHAR     | 25   |  Text      |      |
+| RaceName      | Name of race                                                            | VARCHAR     | 45  |  Text      |      |
 | rLocation     | Location of the race                                                    | VARCHAR     | 45   |  Text      |      |
 | rDate         | Race date                                                               | DATE   | 8    | 99-99-9999 |    |
 | Distance      | How far is the race                                                     | INT      | 3    | 9.99     |      |
@@ -332,10 +332,10 @@ The company can maintain a record of each runner's personal information, enablin
 | Column Name   | Description                                                             | Data Type | Size | Format | Key? |
 |---------------|-------------------------------------------------------------------------|-----------|------|--------|------|
 | ProgramID     | The identification number corresponding to a specific training program  | INT     | 20   |        | PK   |
-| programName   | The Name of a training program                                          | VARCHAR     | 25   |   Text     |      |
+| programName   | The Name of a training program                                          | VARCHAR     | 45   |   Text     |      |
 | Date      | When the session is occuring                                                | DATE   | 4    | 99-99-9999  |      |
-| FocusAreas    | What is the focus of the workout                                        | VARCHAR     | 15   |  Text      |      |
-| Tschedule     | When are these programs available                                        | VARCHAR   | 8    | Text |    |
+| FocusAreas    | What is the focus of the workout                                        | VARCHAR     | 45   |  Text      |      |
+| Tschedule     | When are these programs available                                        | VARCHAR   | 45   | Text |    |
 | Coaches_idCoaches | Unique sequential number indicating the identification number of a coach | INT | 18 | | FK(reference_Coaches) |
 
 ### Table: Recordings
@@ -344,7 +344,7 @@ The company can maintain a record of each runner's personal information, enablin
 |---------------|-------------------------------------------------------------------------|-----------|------|--------|------|
 | Runners_idRunners | Unique sequential number indicating the runner identification number of the athlete | INT | 20 | | FK (refrence_Runners) |
 | Training Programs_ProgramID | The identification number corresponding to a specific training program  | INT | 20 | | FK(reference_Training Programs) |
-| Training Completed | Was the training completed, yes or no?                                  | VARCHAR      | 3    |  Text      |      |
+| Training Completed | Was the training completed, yes or no?                                  | VARCHAR      | 45    |  Text      |      |
 | TrainingLocation | Where do the training sessions                                          | VARCHAR      | 45   |     Text   |      |
 
 ### Table: Transactions
