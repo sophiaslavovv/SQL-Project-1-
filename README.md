@@ -230,6 +230,18 @@ JOIN Attendance ON Events.idEvents = Attendance.Events_idEvents;
 
 This query is useful to identify which types of events are most popular and successful in terms of attendance. It allows them to focus on organizing events that resonate with their participants and align with their interests.It helps the company make informed decisions about future event planning
 
+#10 Which runners finished in the top ten and at what event?
+
+ Select RunnerFirstName, RunnerLastName, RacerPlace, idEvents, EventName
+ From Runners
+ join RaceRegistration on Runners.idRunners= RaceRegistration.Runners_idRunners
+ Join Races on Races.idRaces=RaceRegistration.Races_idRaces
+ join Events on Events.idEvents=Races.Events_idEvents
+ where RacerPlace<11;
+
+This query is useful because the best runners attract the most viewers. By tracking top finishers, we are able to better advertise for future events.
+
+
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
