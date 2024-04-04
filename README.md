@@ -2,7 +2,7 @@
 MIST 4610 - SQL Project 1
 1. Shana Sah (https://github.com/shana-sah/SQL-Project-1-) 
 2. Maya Patel (https://github.com/mayapatel47488/SQL-Project-1-)
-3. Sofia Slavov (https://github.com/sophiaslavovv/SQL-PROJ-1)
+3. Sophia Slavov (https://github.com/sophiaslavovv/SQL-PROJ-1)
 4. Cade Mayfield (https://github.com/CaMay999/sql-project-1-)
 5. Chris Vitucci (https://github.com/chrisvitucci/SQL-Project-1)
 
